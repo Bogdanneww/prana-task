@@ -1,7 +1,7 @@
 import pytest
 from httpx import AsyncClient
 
-from auth_service.app.main import app
+from app.main import app
 
 
 @pytest.fixture

@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends
 from fastapi.responses import StreamingResponse
 
-from pdf_service.app.core.security import get_current_claims
-from pdf_service.app.pdf.generator import build_profile_pdf
+from app.core.security import get_current_claims
+from app.pdf.generator import build_profile_pdf
 
 app = FastAPI(title="PDF Service", version="1.0.0")
 

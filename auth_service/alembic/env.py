@@ -5,8 +5,8 @@ from alembic import context
 from sqlalchemy import pool
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
-from auth_service.app.core.config import settings
-from auth_service.app.db.base import Base
+from app.core.config import settings
+from app.db.base import Base
 from app.models import user  # noqa: F401 (import models for metadata)
 
 config = context.config

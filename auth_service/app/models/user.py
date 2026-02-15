@@ -2,7 +2,7 @@ from datetime import date
 from sqlalchemy import Date, String, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column
 
-from auth_service.app.db.base import Base
+from app.db.base import Base
 
 
 class User(Base):

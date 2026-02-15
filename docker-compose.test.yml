@@ -5,8 +5,7 @@ services:
       POSTGRES_USER: test
       POSTGRES_PASSWORD: test
       POSTGRES_DB: test
-    ports:
-      - "5433:5432"
+
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U test -d test"]
       interval: 3s
@@ -28,6 +27,7 @@ services:
         condition: service_healthy
     command: >
       sh -c "
+      pip install --no-cache-dir -r requirements-dev.txt &&
       alembic upgrade head &&
       pytest -q
       "

@@ -144,4 +144,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
-docker-compose.override.yml
+docker-compose.test.yml
