@@ -1,10 +1,11 @@
-import pytest
-from httpx import AsyncClient
+import pytest_asyncio
+import httpx
 
 from app.main import app
 
 
-@pytest.fixture
+@pytest_asyncio.fixture
 async def client():
-    async with AsyncClient(app=app, base_url="http://test") as ac:
+    transport = httpx.ASGITransport(app=app)
+    async with httpx.AsyncClient(transport=transport, base_url="http://test") as ac:
         yield ac
