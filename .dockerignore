@@ -38,3 +38,7 @@ Thumbs.db
 
 # Playwright browsers
 .playwright/
+
+docker-compose.test.yml
+
+requirements-dev.txt
