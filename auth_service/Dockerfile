@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN pip install --no-cache-dir -U pip
 
-COPY requirements.txt requirements-dev.txt alembic.ini ./
+COPY requirements.txt requirements-dev.txt alembic.ini pytest.ini ./
 COPY app ./app
 COPY tests ./tests
 COPY alembic ./alembic
